@@ -1,0 +1,62 @@
+.header-containter {
+    background: #bcb8b3;
+    height: 80px;
+}
+
+.app-name {
+    padding: 20px;
+}
+.header-logo {
+    height: 60px;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.logout-container {
+    color: black;
+    text-align: right;
+    padding: 20px 50px 25px 25px !important;
+}
+
+.action-button {
+    color: black !important;
+    margin-right: 5px;
+
+    &:hover {
+        color: black !important;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+    &:focus {
+        color: black !important;
+        border: 1px solid black;
+        border-radius: 2px;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.product {
+    padding: 10px;
+    background-color: white;
+    &:hover {
+        border-bottom: 1px solid #d4d2d2;
+    }
+}
+.product-info {
+    margin-top: 10px !important;
+    cursor: pointer;
+    color: black;
+}
+
+.product-name {
+    font-size: xx-large;
+    &:hover {
+        color: rgb(207, 157, 62);
+    }
+}
+
+.product-cost {
+    font-size: larger;
+}
