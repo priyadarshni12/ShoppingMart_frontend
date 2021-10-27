@@ -10,7 +10,7 @@ const App: React.FC<AppProps> = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   const getProductDetails = async (): Promise<Product[]> => {
-    const response: AxiosResponse = await axios.get('http://localhost:4000/Product/');
+    const response: AxiosResponse = await axios.get('/Product/');
     if (response.status !== 200) {
       throw new Error("Unable to fetch scan page info, please try later!");
     } else {

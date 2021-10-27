@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import SignIn from '../SignIn/SignIn';
-
-
 import './Dashboard.scss';
 
 export interface DashboardProps {
@@ -49,9 +47,6 @@ const Dashboard: React.FC<DashboardProps> = ({ products }) => {
                     <div className='col-3 col-lg-3 col-md-3 col-sm-3'>
                         <h2 className='app-name'>SHOPPINGMART</h2>
                     </div>
-                    {/* <div className='col-6 col-lg-6 col-md-6 col-sm-6'>
-
-                        </div> */}
                     <div className='col-9 col-lg-9 col-md-9 col-sm-9 logout-container'>
                         <button
                             className='btn action-button'
@@ -82,8 +77,8 @@ const Dashboard: React.FC<DashboardProps> = ({ products }) => {
             </div>
             {signIn
                 ? <SignIn
-                products={products} 
-                SignInSuccessful={SignInSuccessful}
+                    products={products}
+                    SignInSuccessful={SignInSuccessful}
                 />
                 : gotoDashboard
                     ? <div className='main-product'>

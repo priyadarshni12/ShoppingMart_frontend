@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SignIn from '../SignIn/SignIn';
 import axios from 'axios';
 import { encrypt } from '../Utils/passwordUtils';
 import './SignUp.scss';
@@ -103,9 +102,9 @@ const SignUp: React.FC<SignUpProps> = ({ signUpSuccessful }) => {
     if (passwordObj.value === '') {
       passwordObj.error = '*Enter Password';
     }
-    // else if (!passwordObj.value.match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!^*(_)]).*$/)) {
-    //   passwordObj.error = "*Password should contain minimum 8 letters with atleast 1 Lowercase 1 uppercase 1 number and 1 special symbol";
-    // }
+    else if (!passwordObj.value.match(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!^*(_)]).*$/)) {
+      passwordObj.error = "*Password should contain minimum 8 letters with atleast 1 Lowercase 1 uppercase 1 number and 1 special symbol";
+    }
     else {
       passwordObj.error = '';
     }
@@ -145,12 +144,6 @@ const SignUp: React.FC<SignUpProps> = ({ signUpSuccessful }) => {
       .catch(err => console.log(err))
   });
 
-  // if (signIn) {
-  //   return (
-  //     <SignIn />
-  //   );
-  // }
-  // else {
   return (
     <div className='container'>
       <div className='text-center'>
@@ -255,7 +248,6 @@ const SignUp: React.FC<SignUpProps> = ({ signUpSuccessful }) => {
       </div>
     </div>
   )
-  // }
 };
 
 export default SignUp;

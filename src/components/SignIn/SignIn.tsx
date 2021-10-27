@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SignUp from '../SignUp/SignUp';
 import axios from 'axios';
-import Dashboard from '../Dashboard/Dashboard';
 import { decrypt } from '../Utils/passwordUtils'
 import './SignIn.scss';
 
@@ -96,12 +95,12 @@ const SignIn: React.FC<SignInProps> = ({ products, SignInSuccessful }) => {
       .catch(err => console.log(err))
   });
 
-  const signUpSuccessful= (): void => {
+  const signUpSuccessful = (): void => {
     setSignUp(false);
   }
   if (signUp) {
     return (
-      <SignUp signUpSuccessful = {signUpSuccessful}/>
+      <SignUp signUpSuccessful={signUpSuccessful} />
     );
   }
   else {
